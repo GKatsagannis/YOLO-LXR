@@ -1,0 +1,17 @@
+# Number of classes
+nc: 7  # Total number of classes
+
+names:
+  [
+    "adenocarcinoma",
+    "adenocarcinoma_left.lower.lobe_T2_N0_M0_Ib",
+    "large.cell.carcinoma",
+    "large.cell.carcinoma_left.hilum_T2_N2_M0_IIIa",
+    "normal",
+    "squamous.cell.carcinoma",
+    "squamous.cell.carcinoma_left.hilum_T1_N2_M0_IIIa"
+  ]
+
+train: /content/drive/MyDrive/Lung cancer DATASET.v4i.folder/train
+val: /content/drive/MyDrive/Lung cancer DATASET.v4i.folder/valid
+test: /content/drive/MyDrive/Lung cancer DATASET.v4i.folder/test

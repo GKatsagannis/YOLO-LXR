@@ -1,0 +1,7 @@
+# Number of classes
+nc: 1  # You have one class: Nodule
+
+names: ['Nodule']
+
+train: /content/drive/MyDrive/Luna16.v1i.yolov8/train
+val: /content/drive/MyDrive/Luna16.v1i.yolov8/val
