@@ -1,0 +1,66 @@
+# YOLOv9 with Single CBAM Block for Debugging
+
+# parameters
+nc: 1  # number of classes
+
+# anchors
+anchors: 6
+
+# gelan backbone
+backbone:
+  [
+   [-1, 1, Conv, [32, 3, 1]],  # 0: Initial conv layer with 32 filters
+
+   [-1, 1, Conv, [64, 3, 2]],  # 1: Downsample with stride 2
+   [-1, 1, Conv, [64, 3, 1]],  # 2: Conv layer
+
+   [-1, 1, RepVGG, [64, 3, 2]],  # 3: Downsample with RepVGG
+
+   [-1, 1, ResidualBlock, [64, 64]],  # 4: Residual block
+
+   [-1, 1, SEBlock, [64]],  # 5: Squeeze-and-Excite block
+
+   [-1, 1, CBAM, [64]],  # 6: Single CBAM block at 64 channels
+
+   [-1, 1, RepVGG, [128, 3, 2]],  # 7: Downsample with RepVGG (stride 2)
+
+   [-1, 1, SEBlock, [128]],  # 8: Squeeze-and-Excite block
+
+   [-1, 1, CBAM, [128]],  # 9: CBAM block at 128 channels
+
+   [-1, 1, RepVGG, [256, 3, 2]],  # 10: Downsample with RepVGG (stride 2)
+
+   [-1, 1, SEBlock, [256]],  # 11: Squeeze-and-Excite block
+
+   [-1, 1, ADown, [256]],  # 12: Custom ADown block for further downsampling
+
+   [-1, 1, RepNCSPELAN4, [512, 256, 128, 1]],  # 13: Custom RepNCSPELAN4 block
+
+   [-1, 1, CBAM, [512]],  # 14: Single CBAM block at 512 channels
+
+   [-1, 1, ADown, [512]],  # 15: Custom ADown block for further downsampling
+  ]
+
+# gelan head
+head:
+  [
+   [-1, 1, SPPELAN, [512, 256]],  # 16: SPP block with ELAN structure
+
+   [-1, 1, CBAM, [512]],  # 17: Single CBAM block applied after SPP
+
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],  # 18: Upsample (P5/32 to P4 size)
+   [[-1, 12], 1, Concat, [1]],  # 19: Concatenate with P4 output
+
+   [-1, 1, RepNCSPELAN4, [512, 512, 256, 1]],  # 20: Process concatenated features
+
+   [-1, 1, CBAM, [512]],  # 21: Apply CBAM at 512 channels
+
+   [-1, 1, nn.Upsample, [None, 2, 'nearest']],  # 22: Upsample (P4/16 to P3 size)
+   [[-1, 11], 1, Concat, [1]],  # 23: Concatenate with P3 output
+
+   [-1, 1, RepNCSPELAN4, [256, 256, 128, 1]],  # 24: Process concatenated features
+
+   [-1, 1, CBAM, [256]],  # 25: Apply CBAM at 256 channels
+
+   [[-1], 1, DDetect, [nc]],  # 26: Final detection layer (P3 only)
+  ]

@@ -1,0 +1,6 @@
+
+names:
+  0: brain tumor
+path: /content/drive/MyDrive/brain
+train: /content/drive/MyDrive/brain/TRAIN
+val: /content/drive/MyDrive/brain/VAL
