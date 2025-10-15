@@ -1,4 +1,4 @@
-# Lung Nodule Detection Using YOLO-like Architectures: A Study on X-ray and CT-Scan Imaging
+# YOLO-LXR: An Enhanced Model for Pathology Detection in Chest X-Rays
 This repository contains the implementation of two YOLO-inspired deep learning architectures designed for detecting lung nodules in X-ray and CT scan images. The models have been developed to enhance automated diagnostic accuracy and assist radiologists in identifying lung abnormalities efficiently.
 
 ## Getting Started
