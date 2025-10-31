@@ -29,23 +29,31 @@ By following these steps, you will ensure that the models can access the dataset
 
 ## Documentation
 
-The code should execute without issues, except for sections related to CAF-YOLO. To run those parts successfully, follow these steps:
+After downloading the datasets, create the corresponding *.yaml* configuration files that define the dataset structure and guide the model architecture to the correct data paths.
+Two examples are provided for reference:
 
-1. Locate the relevant line of code by hovering over it, as shown in the screenshot below.
+- VinDr-CXR-data.yaml
 
-![CAF-YOLO Instructions 1](https://github.com/user-attachments/assets/ab60cada-79e9-408c-9a54-7ed313146ea0)
+- data.yaml
 
+These files specify the locations of the training, validation, and testing data for each dataset.
 
-2. Press Control (Ctrl) + Left Click to open the referenced script.
+The repository includes three implementation notebooks, each tailored for a specific dataset. These notebooks handle model training, validation, and evaluation. All are designed to run seamlessly in Google Colab.
 
-![CAF-YOLO Instructions 2](https://github.com/user-attachments/assets/83142da0-94b9-472e-871b-85cebf7d4568)
+- *CestX_ray14_Implementation.ipynb* – Implementation for the ChestX-ray14 dataset
 
+- *VinDr_CXR_Implementation.ipynb* – Implementation for the VinDr-CXR dataset
 
-3. Once the script opens, modify the highlighted section of the code to specify the correct path to the dataset folder you intend to use with CAF-YOLO.
-(Example: _/content/drive/MyDrive/Luna16.v1i.yolov8_)
+- *X-Nodules_Implementation.ipynb* – Implementation for the X-Nodules dataset
 
-By ensuring the correct dataset path is set, you will enable seamless execution of CAF-YOLO within the framework.
+Each notebook ensures a streamlined workflow, from data preparation to model evaluation, making it easy to reproduce and compare results across datasets.
+
 ## License
 
 This project is intended for research and educational purposes. Please ensure compliance with dataset licensing terms when using this repository.
+
+
+
+
+
 
