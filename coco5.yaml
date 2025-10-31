@@ -1,7 +1,0 @@
-# Number of classes
-nc: 1  # You have one class: lung nodule
-
-names: ['nodule']
-
-train: /content/drive/MyDrive/X-Nodule/train
-val: /content/drive/MyDrive/X-Nodule/val

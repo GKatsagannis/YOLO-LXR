@@ -1,0 +1,7 @@
+# Number of classes
+nc: 14  # You have one class: Nodule
+
+names: ['Aortic enlargement', 'Atelectasis', 'Calcification', 'Cardiomegaly', 'Consolidation', 'ILD', 'Infiltration', 'Lung Opacity', 'Nodule-Mass', 'Other lesion', 'Pleural effusion', 'Pleural thickening', 'Pneumothorax', 'Pulmonary fibrosis']
+
+train: /content/drive/MyDrive/VinDr-CXR/train
+val: /content/drive/MyDrive/VinDr-CXR/val

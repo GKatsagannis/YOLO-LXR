@@ -1,0 +1,18 @@
+# Number of classes
+nc: 8  # You have 8 classes total
+
+# Class names (must match your dataset order)
+names: [
+  'Atelectasis',
+  'Cardiomegaly',
+  'Effusion',
+  'Infiltrate',
+  'Mass',
+  'Nodule',
+  'Pneumonia',
+  'Pneumothorax'
+]
+
+# Dataset paths
+train: /content/drive/MyDrive/ChestX-ray14/train
+val: /content/drive/MyDrive/ChestX-ray14/val
