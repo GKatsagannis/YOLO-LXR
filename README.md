@@ -1,5 +1,5 @@
 # YOLO-LXR: An Enhanced Model for Pathology Detection in Chest X-Rays
-This repository contains the implementation of two YOLO-inspired deep learning architectures designed for detecting lung nodules in X-ray and CT scan images. The models have been developed to enhance automated diagnostic accuracy and assist radiologists in identifying lung abnormalities efficiently.
+This repository contains the implementation of a YOLO-inspired deep learning architectures designed for detecting lung nodules in X-ray and CT scan images. The models have been developed to enhance automated diagnostic accuracy and assist radiologists in identifying lung abnormalities efficiently.
 
 ## Getting Started
 
@@ -19,9 +19,11 @@ Apply necessary preprocessing techniques to prepare the data for training.
 
 Ensure that the dataset folders are correctly named as follows:
 
-- Rename the LUNA16 dataset folder to: Luna16.v1i.yolov8
+- Rename the LUNA16 dataset folder to: VinDr-CXR
 
 - Rename the X-Nodule dataset folder to: X-Nodule
+
+- Rename the X-Nodule dataset folder to: ChestX-ray14
 
 By following these steps, you will ensure that the models can access the datasets correctly and operate without compatibility issues.
 
