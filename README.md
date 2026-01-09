@@ -19,11 +19,11 @@ Apply necessary preprocessing techniques to prepare the data for training.
 
 Ensure that the dataset folders are correctly named as follows:
 
-- Rename the LUNA16 dataset folder to: VinDr-CXR
+- Rename the VinDr-CXR dataset folder to: VinDr-CXR
 
 - Rename the X-Nodule dataset folder to: X-Nodule
 
-- Rename the X-Nodule dataset folder to: ChestX-ray14
+- Rename the ChestX-ray14 dataset folder to: ChestX-ray14
 
 By following these steps, you will ensure that the models can access the datasets correctly and operate without compatibility issues.
 
