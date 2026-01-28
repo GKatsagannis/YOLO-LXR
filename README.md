@@ -50,7 +50,11 @@ Each notebook ensures a streamlined workflow, from data preparation to model eva
 
 ## License
 
-This project is intended for research and educational purposes. Please ensure compliance with dataset licensing terms when using this repository.
+This project is released under the MIT License.  
+See the LICENSE file for details.
+
+Please note that use of the code must comply with the licensing terms of any datasets employed.
+
 
 
 
