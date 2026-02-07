@@ -48,6 +48,11 @@ The repository includes three implementation notebooks, each tailored for a spec
 
 Each notebook ensures a streamlined workflow, from data preparation to model evaluation, making it easy to reproduce and compare results across datasets.
 
+## Additional Information
+*Yolo for Lungs Results.xlsx* is an Excel file that brings together all the results from this research, organised into three sheets. While most of the information can also be found in the implementation files, this workbook provides everything in one place and in a more tidy and easy-to-read format.
+
+Each sheet corresponds to a different dataset and includes a table showing the performance of each benchmark architecture. The first sheet also contains the ablation study for YOLOv5 and RepVGG-GELAN. The other two sheets include a comparison table and a summary table, which make it easier to compare model performance on multi-class datasets.
+
 ## License
 
 This project is released under the MIT License.  
