@@ -58,8 +58,6 @@ Each sheet corresponds to a different dataset and includes a table showing the p
 This project is released under the MIT License.  
 See the LICENSE file for details.
 
-Please note that use of the code must comply with the licensing terms of any datasets employed.
-
 
 
 
